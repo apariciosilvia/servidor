@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario del Jugador</title>
+    <style>
+        body{
+            background-color: #797999;
+        }
+
+        h1{
+            color: black;
+            text-align: center;
+        }
+
+        .formulario{
+            background-color: white;
+            width: 80%;
+            margin-right: 10%;
+            margin-left: 10%;
+            padding-left: 3%;
+            padding-top: 3%;
+            border-radius: 20px;
+        }
+
+        .campos label{
+            font-weight: bolder;
+        }
+
+        .campos input{
+            width: 95%;
+            padding: 1%;
+            margin-bottom: 2%;
+            margin-top: 1%;
+        }
+
+        #tituloElegir{
+            margin: 0;
+        }
+
+        .elegir{
+            border: 2px solid #ccc;
+            padding: 2%;
+            width: 90%;
+            margin-top: 0;
+            border-radius: 5px;
+            margin-bottom: 3%;
+        }
+
+        .elegir label{
+            font-weight: bolder;
+        }
+
+        input[type="checkbox"] {
+            margin-bottom: 1%;
+        }
+
+        .imagen{
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            padding: 2%;
+            width: 90%;
+            margin-top: 1%;
+            margin-bottom: 5%;
+        }
+
+        .labelIMG{
+            font-weight: bolder;
+        }
+
+        .button{
+            background-color: #0080FF;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            color: white;
+            margin-right: 10px;
+            margin-bottom: 4%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulario de Jugador</h1>
+    <div class="formulario">
+        <form action="index.php" method="POST" enctype="multipart/form-data">
+
+            <section class="campos">
+                <label>Nombre:</label> <br>
+                <input type="text" name="nombre" required>
+            </section>
+
+            <section class="campos">
+                <label>Alias:</label> <br>
+                <input type="text" name="alias" required>
+            </section>
+                
+            <section class="campos">
+                <label>Edad:</label> <br>
+                <input type="number" name="edad" required>
+            </section>
+               
+            <section class="elegir">
+                <p id="tituloElegir">Armas a elegir (puedes elegir varias):</p> <br>
+                     
+                <input type="checkbox" name="elegirArma[]" value="Maza">
+                <label>Maza</label><br>
+
+                <input type="checkbox" name="elegirArma[]" value="Antorcha">
+                <label>Antorcha</label><br>
+                   
+                <input type="checkbox" name="elegirArma[]" value="Martillo">
+                <label>Martillo</label><br>
+                
+                <input type="checkbox" name="elegirArma[]" value="Látigo">
+                <label>Látigo</label><br>
+            </section>
+
+            <section class="elegir">
+                <p id="tituloElegir">¿Practica artes mágicas?</p> <br>
+
+                <input type="radio" checked name="elegir" value="Si"> 
+                <label>Sí</label> <br>
+
+                <input type="radio" name="elegir" value="No">
+                <label>No</label><br>
+            </section>
+
+            <label class="labelIMG">Subir imagen:</label> <br>
+            <section  class="imagen">
+                <input type="file" name="fichero" accept="image/png">
+                <input type="hidden" name="MAX_FILE_SIZE" value="10240">
+            </section>
+
+            <input class="button" type="submit" value="Enviar">  <input class="button" type="reset" value="Borrar">
+                
+        </form>
+    </div>
+</body>
+</html>

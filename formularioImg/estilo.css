@@ -1,0 +1,28 @@
+.titulo{
+    text-align: center;
+    font-weight: bolder;
+}
+.respuesta{
+    display: flex;               /* Activa flexbox */
+    justify-content: space-between; /* Coloca un elemento a cada lado (izquierda y derecha) */
+    align-items: center;         /* Centra verticalmente */
+    height: 100vh;               /* Asegura que tome toda la altura de la pantalla, si es necesario */
+    padding: 0 20px;
+}
+.contenidoJugador{
+    text-align: left;
+    margin-left: 20%;   
+}
+.contenidoFoto{
+    text-align: right;
+    margin-right: 20%;
+}
+
+#mensaje{
+    margin-bottom: 5%;
+}
+#foto{
+    border: 2px solid black;
+    padding: 2%;
+    border-radius: 1px;
+}
